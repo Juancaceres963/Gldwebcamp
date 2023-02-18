@@ -120,8 +120,26 @@
       max-width: 1110px;
     }
   }
+  .seccion {
+    padding: 30px 0;
+  }
+  .seccion p {
+    font-size: 1.2em;
+    text-align: center;
+  }
   h2 {
     font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  h2::after {
+    content: "";
+    margin: 10px auto 16px auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
   }
   /*==== Header ======*/
   div.hero {

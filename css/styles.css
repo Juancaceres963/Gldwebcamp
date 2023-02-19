@@ -430,6 +430,7 @@ div.invitado img {
 div.invitado img:hover{
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
+  cursor: pointer;
 }
 div.invitado p {
   position: absolute;
@@ -450,9 +451,54 @@ div.invitado:hover p {
   opacity: 0;
   transition: all .4s ease;
 }
-
-
-
+/*Seccion de contador*/
+.paralax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+  background-attachment: fixed; /*Fija una imagen o fondo, el scroll se puede mover pero la imagen no se mueve de su posicion fija*/
+  -webkit-filter: brightness(.8);
+  filter: brightness(.7);
+}
+div.contador {
+  position: relative;
+  height: auto;
+}
+div.contador::before{
+  background-image: url(../img/bg-resumen.jpg);
+  content: "";
+}
+ul.resumen-evento {
+  position: relative;
+  padding: 120px 0;
+}
+ul.resumen-evento li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+@media only screen and (min-width: 768px){
+  ul.resumen-evento li{
+    width: 25%;
+  }
+}
+p.numero{
+  font-weight: bold;
+  color: #fe4918;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+}
 
 
 

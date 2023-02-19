@@ -169,6 +169,11 @@
   .float-right{
     float: right;
   }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
   /*==== Header ======*/
   div.hero {
     background-image: url(../img/encabezado.jpg);
@@ -396,8 +401,55 @@ div.detalle-evento p{
   margin-bottom: 20px;
   font-size: 20px;
 }
+/* Invitados*/
+ul.lista-invitados li{
+  padding: 10px;
+  float: left;
+}
+ @media only screen and (min-width: 480px){
+  ul.lista-invitados li{
+    width: 50%;
+  }
+}
 
-
+@media only screen and (min-width: 768px){
+  ul.lista-invitados li{
+    width: 33.3%;
+  }
+}
+div.invitado {
+  position: relative;
+  overflow: hidden; /*Le da a las imagenes la caracteristica de cortarse cuando no se muestren*/
+}
+div.invitado img {
+  max-width: 100%;
+  filter:gray;
+  -webkit-filter: grayscale(1);
+  transition: all .4s ease;
+}
+div.invitado img:hover{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+div.invitado p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #fe4918;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+div.invitado:hover p {
+  bottom: -80px;
+  opacity: 0;
+  transition: all .4s ease;
+}
 
 
 

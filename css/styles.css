@@ -679,9 +679,46 @@ div.cuenta-regresiva ul li{
     width: 25%;
   }
 }
-
-
-
+/*Footer*/
+footer{
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+footer .contenedor > div{
+  color: white;
+  padding: 0 20px;
+  font-size: 12px;
+  text-align: justify;
+}
+@media only screen and (min-width: 768px){
+  footer .contenedor > div{
+    width: 33.3%;
+    float: left;
+  }
+}
+footer h3 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+footer h3 span {
+  color: #fe4918;
+}
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+}
+footer nav.redes-sociales {
+  text-align: left;
+}
+footer .copyrigth{
+  background-color: #2e2e2e;
+  padding: 15px 0;
+  color: white;
+  margin: 20px 0 0 0 ;
+  text-align: center;
+}
 
 
 

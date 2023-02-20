@@ -563,9 +563,70 @@ div.mapa {
   height: 420px;
   width: 100%;
 }
-
-
-
+/*Testimoniales*/
+div.testimoniales {
+  padding-bottom: 20px;
+}
+div.testimonial {
+  padding: 5px;
+}
+@media only screen and (min-width: 768px){
+  div.testimonial {
+    float: left;
+    width: 33.3%;
+  }
+}
+blockquote {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  margin: 0 0 10px 0;
+  position: relative;
+  padding-bottom: 20px;
+}
+blockquote p {
+  font-size: .8em !important;
+  text-align: justify !important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 20PX 20px 0 65px;
+}
+blockquote p::before{
+  content: "\201C";
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  color: #fe4918;
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+footer.info-testimonial{
+  padding: 0;
+}
+footer.info-testimonial img{
+  border-radius: 50%;
+  width: 20%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+footer.info-testimonial cite {
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+footer.info-testimonial cite span {
+  color: black;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+}
 
 
 

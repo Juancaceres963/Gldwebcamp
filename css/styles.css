@@ -173,8 +173,18 @@
     background-color: #fe4918;
     color: white;
   }
+  .button.transparente {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all .2s ease;
+  }
+  .button.transparente:hover{
+    border: 1px solid #fe4918;
+
+  }
   .button:hover{
     background-color: #e33000;
+    transition: all .2s ease;
   }
   .float-right{
     float: right;
@@ -471,7 +481,6 @@ div.invitado:hover p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  
   background-attachment: fixed; /*Fija una imagen o fondo, el scroll se puede mover pero la imagen no se mueve de su posicion fija*/
   -webkit-filter: brightness(.8);
   filter: brightness(.7);
@@ -532,6 +541,7 @@ div.tabla-precio:hover{
   transform: scale(1.1);
   border: 1px solid #fe4918;
   box-shadow: 0 0 25px #666;
+  cursor: pointer;
 }
 div.tabla-precio ul li{
   font-family: 'PT Sans', sans-serif;
@@ -615,7 +625,7 @@ footer.info-testimonial cite {
   color: #fe4918;
   text-transform: uppercase;
   font-size: 12px;
-  padding-top: 20px;
+  padding-top: 26px;
   width: 66.6%;
   float: right;
   font-weight: bold;
@@ -628,6 +638,31 @@ footer.info-testimonial cite span {
   margin-top: 5px;
 }
 
+/* Newsletter*/
+div.newsletter {
+  position: relative;
+  height: auto;
+}
+div.newsletter::before {
+  content: " ";
+  background-image: url(../img/bg-newsletter.jpg);
+}
+div.newsletter .contenido {
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+div.newsletter .contenido h3{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
 
 
 

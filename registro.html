@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gldwebcamp</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="side-header">
+      <div class="hero">
+        <div class="contenido-header">
+          <nav class="redes-sociales">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </nav>
+          <div class="informacion-evento">
+            <div class="clearfix">
+              <p class="fecha">
+                <i class="fa-regular fa-calendar-days"></i>10-12 Dic
+              </p>
+              <p class="ciudad">
+                <i class="fa-solid fa-location-dot"></i>Guadalajara, MX
+              </p>
+            </div>
+            <h1 class="nombre-sitio">GdlWebCamp</h1>
+            <p class="slogan">
+              La mejor conferencia de <span>diseño web</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="barra">
+        <div class="contenedor clearfix">
+          <div class="logo">
+            <img src="/img/logo.svg" alt="Logo Gldwebcamp" />
+          </div>
+          <div class="menu-movil">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="navegacion-principal">
+            <a href="#">Conferencia</a>
+            <a href="#">Calendario</a>
+            <a href="#">Invitados</a>
+            <a href="/registro.html">Reservaciones</a>
+          </nav>
+        </div>
+      </div>
+      <section class="seccion contenedor">
+          <h2>Registro de Usuarios</h2>
+          <form id="registro" class="registro" action="index.html" method="post">
+            <div id="datos-usuarios" class="registro caja clearfix">
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
+                </div>
+                <div class="campo">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Tu Email">
+                </div>
+                <div id="error"></div> <!--Vamos a validad con JS-->
+            </div>
+          </form>
+      </section>
+    <footer class="site-footer">
+      <div class="contenedor clearfix">
+        <div class="footer-informacion">
+          <h3>Sobre <span>Gldwebcamp</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            adipisci fugiat provident veritatis excepturi commodi, dolore
+            dolorum voluptas eius laborum nihil autem tempora ab sunt ullam
+            facere voluptatibus quasi totam.
+          </p>
+        </div>
+        <div class="ultimos-tweets">
+          <h3>Ultimos <span>Tweets</span></h3>
+          <ul>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              ullam inventore dolore 
+            </li>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              ullam inventore dolore nisi voluptatum alias tempora vitae hic vel
+              cumque dolores vero.
+            </li>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              ullam inventore 
+            </li>
+          </ul>
+        </div>
+        <div class="menu">
+          <h3>Redes <span>Sociales</span></h3>
+          <nav class="redes-sociales">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </nav>
+        </div>
+      </div>
+      <p class="copyrigth">Todos los Derechos Reservados GDLWEBCAMP 2023</p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a4f9efcdf1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

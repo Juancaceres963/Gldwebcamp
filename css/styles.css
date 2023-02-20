@@ -120,13 +120,6 @@
       max-width: 1110px;
     }
   }
-  .seccion {
-    padding: 30px 0;
-  }
-  .seccion p {
-    font-size: 1.2em;
-    text-align: center;
-  }
   h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 2.4em;
@@ -150,6 +143,13 @@
   h3, p{
     padding: 10px 0;
   }
+  .seccion {
+    padding: 30px 0;
+  }
+  .seccion p {
+    font-size: 1.2em;
+    text-align: center;
+  }
   .button{
     background-color: #fe4918;
     padding: 10px 40px;
@@ -162,6 +162,16 @@
     margin-top: 20px;
     display: inline-block;
     transform: all .3s ease;
+  }
+  a.button.hollow{
+    background-color: white;
+    color: #fe4918;
+    border: 1px solid #fe4918;
+    transition: all .1s ease;
+  }
+  a.button.hollow:hover{
+    background-color: #fe4918;
+    color: white;
   }
   .button:hover{
     background-color: #e33000;
@@ -498,7 +508,81 @@ p.numero{
   font-size: 4em;
   display: block;
   margin: 0 0 10px 0;
+  font-family: 'Oswald', sans-serif;
 }
+/*Seccion de Precios*/
+ul.lista-precios > li {
+  padding: 10px;
+}
+@media only screen and (min-width: 768px){
+  ul.lista-precios > li {
+    float: left;
+    width: 33.3%;
+  }
+}
+div.tabla-precio {
+  border: 1px solid #e1e1e1;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #ffffff;
+  transition: all .3s ease;
+  margin: 0 10px;
+}
+div.tabla-precio:hover{
+  transform: scale(1.1);
+  border: 1px solid #fe4918;
+  box-shadow: 0 0 25px #666;
+}
+div.tabla-precio ul li{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+}
+div.tabla-precio ul li::before{
+  content: "\f00c";
+  font-family: "FontAwesome";
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smothing: antialiased;
+}
+div.tabla-precio h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: 'Oswald', sans-serif;
+}
+div.tabla-precio p.numero {color: black;}
+/*Mapa*/
+div.mapa {
+  background-color: lightgreen;
+  height: 420px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

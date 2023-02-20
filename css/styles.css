@@ -663,6 +663,23 @@ div.newsletter .contenido h3{
   font-size: 7vw;
   font-family: 'PT Sans', sans-serif;
 }
+/*Cuenta regresiva*/
+div.cuenta-regresiva ul li .numero{
+  margin-bottom: 0;
+}
+div.cuenta-regresiva ul li{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+}
+@media only screen and (min-width: 768px){
+  div.cuenta-regresiva ul li{
+    float: left;
+    width: 25%;
+  }
+}
+
 
 
 

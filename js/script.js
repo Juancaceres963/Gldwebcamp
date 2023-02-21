@@ -25,6 +25,12 @@ const suma = document.getElementById("suma_total");
 var etiquetas = document.getElementById("etiquetas");
 var camisas = document.getElementById("camisa-evento");
 
+pase_dia.addEventListener("blur", mostrarDias); //Evento que espera a que un input termine de tener su valor
+pase_dos_dias.addEventListener("blur", mostrarDias);
+pase_completo.addEventListener("blur", mostrarDias);
+
+calcular.addEventListener("click", calcularMontos); // Evento que se activa al hacer click
+
 //Funciones 
 //Calcular Montos 
 function calcularMontos(event){
@@ -71,6 +77,29 @@ function calcularMontos(event){
         suma.innerHTML = "$ " + totalPagar.toFixed(2); //Con tofixed recortamos para que solo tenga la cantidad de decimales que queremos 
     }
 }
-calcular.addEventListener("click", calcularMontos)
+
+function mostrarDias(){
+    var valorPaseDia = parseInt(pase_dia.value, 10)|| 0 ,
+        valorPaseDosDias = parseInt(pase_dos_dias.value, 10)|| 0  ,
+        valorPaseCompleto = parseInt(pase_completo.value, 10)|| 0;
+
+        var diasElegidos = [];
+        if (valorPaseDia > 0){
+            diasElegidos.push("viernes");
+        }
+        if (valorPaseDosDias > 0){
+            diasElegidos.push("viernes", "sabado");
+        }
+        if (valorPaseCompleto > 0){
+            diasElegidos.push("viernes", "sabado", "domingo");
+        }
+
+        for (let i = 0; i < diasElegidos.length; i++){
+            document.getElementById(diasElegidos[i]).style.display = "block";
+        }
+}
+
+
+
     }); //Don content Loaded
 })();

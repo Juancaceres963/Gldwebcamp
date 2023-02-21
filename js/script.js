@@ -29,6 +29,44 @@ pase_dia.addEventListener("blur", mostrarDias); //Evento que espera a que un inp
 pase_dos_dias.addEventListener("blur", mostrarDias);
 pase_completo.addEventListener("blur", mostrarDias);
 
+//Validacion de campos 
+nombre.addEventListener("blur", function(){
+    if(this.value == ""){
+        errorDiv.style.display = "block";
+        errorDiv.innerHTML = "Este campo es obligatorio.";
+        this.style.border = "1px solid red";
+        errorDiv.style.border = "1px solid red";
+    } 
+    else {
+        this.style.border = "1px solid #222";
+        errorDiv.innerHTML = "";
+        errorDiv.style.border = "none";
+    }
+})
+apellido.addEventListener("blur", function(){
+    if(this.value == ""){
+        errorDiv.style.display = "block";
+        errorDiv.innerHTML = "Este campo es obligatorio.";
+        this.style.border = "1px solid red";
+        errorDiv.style.border = "1px solid red";
+    } else {
+        this.style.border = "1px solid #222";
+        errorDiv.innerHTML = "";
+        errorDiv.style.border = "none";
+    }
+})
+email.addEventListener("blur", function(){
+    if(this.value == ""){
+        errorDiv.style.display = "block";
+        errorDiv.innerHTML = "Este campo es obligatorio.";
+        this.style.border = "1px solid red";
+        errorDiv.style.border = "1px solid red";
+    } else {
+        this.style.border = "1px solid #222";
+        errorDiv.innerHTML = "";
+        errorDiv.style.border = "none";
+    }
+})
 calcular.addEventListener("click", calcularMontos); // Evento que se activa al hacer click
 
 //Funciones 

@@ -829,7 +829,15 @@ div.suma-total {
   color: #fe4918;
   
 }
-
+#error {
+  color: red;
+  font-weight: bold;
+  clear: both;
+  padding: 5px;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+}
 
 
 

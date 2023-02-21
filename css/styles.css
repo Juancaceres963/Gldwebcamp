@@ -180,7 +180,6 @@
   }
   .button.transparente:hover{
     border: 1px solid #fe4918;
-
   }
   .button:hover{
     background-color: #e33000;
@@ -721,11 +720,77 @@ footer .copyrigth{
   text-align: center;
 }
 
+/*INTERNAS */
 
-
-
-
-
+/*Estilos formulario registro*/
+form.registro h3{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+form.registro label{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+div.caja{
+  background-color: #fff;
+  border: 1px solid#e1e1e1;
+  padding: 10px;
+  margin: 10px;
+}
+div.campo{
+  padding: 20px;
+}
+@media only screen and (min-width:768px) {
+  div.campo{
+    float: left;
+    width: 33.3%;
+  }
+}
+div.paquetes .tabla-precio:hover{
+  transform: none;
+  box-shadow: none;
+}
+div.paquetes .tabla-precio input{
+  clear: both;
+  width: 80px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+input.button{
+  border: none;
+}
+.contenido-dia{
+  padding: 20px;
+  /*display: none;*/
+}
+@media only screen and (min-width:768px){
+.contenido-dia > div {
+    float: left;
+    width: 33.3%;
+  }
+}
+.contenido-dia > div p{
+  text-align: left;
+}
+.contenido-dia > div label{
+  display: block;
+  margin-bottom: 10px;
+}
+.contenido-dia > div input {
+  margin-right: 10px;
+}
+.contenido-dia > div label time{
+  color: #fe4918;
+  font-weight: bold;
+}
 
 
 

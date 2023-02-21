@@ -19,6 +19,7 @@ const calcular = document.getElementById("calcular");
 const errorDiv = document.getElementById("error");
 const bottonRegistro = document.getElementById("btnRegistro");
 const lista_productos = document.getElementById("lista_productos");
+const suma = document.getElementById("suma_total");
 
 //Extras
 var etiquetas = document.getElementById("etiquetas");
@@ -58,6 +59,7 @@ function calcularMontos(event){
             listadoProductos.push(cantEtiquetas + " Etiquetas")
         }
 
+        lista_productos.style.display = "block"; //Para que el bg-color del listado en el HTML se vea de color dierente al cargar 
         // Codigo para imprimir los elementos de listadoProductos en el div lista_productos que esta en el HTML
         lista_productos.innerHTML = ""; // Este innerHTML vacio es para que no reimprima todo lo que se selecciono
         // si el usuario agrega algo mas despues de calcular
@@ -65,6 +67,8 @@ function calcularMontos(event){
             lista_productos.innerHTML += listadoProductos[i] +"<br/>";
         }
 
+        //Imprimir el total 
+        suma.innerHTML = "$ " + totalPagar.toFixed(2); //Con tofixed recortamos para que solo tenga la cantidad de decimales que queremos 
     }
 }
 calcular.addEventListener("click", calcularMontos)

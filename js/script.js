@@ -20,6 +20,10 @@ const errorDiv = document.getElementById("error");
 const bottonRegistro = document.getElementById("btnRegistro");
 const resultado = document.getElementById("lista_productos");
 
+//Extras
+var etiquetas = document.getElementById("etiquetas");
+var camisas = document.getElementById("camisa-evento");
+
 //Funciones 
 //Calcular Montos 
 function calcularMontos(event){
@@ -30,9 +34,11 @@ function calcularMontos(event){
     } else {
         var valorPaseDia = pase_dia.value ,
             valorPaseDosDias = pase_dos_dias.value ,
-            valorPaseCompleto = pase_completo.value;
+            valorPaseCompleto = pase_completo.value,
+            cantCamisas = camisas.value,
+            cantEtiquetas = etiquetas.value;
 
-        var totalPrecioPases = (valorPaseDia * 30) + (valorPaseDosDias * 45) + (valorPaseCompleto * 50);
+        var totalPrecioPases = (valorPaseDia * 30) + (valorPaseDosDias * 45) + (valorPaseCompleto * 50) + ((cantCamisas * 10) * .93) + (cantEtiquetas * 2);
         console.log(totalPrecioPases);
     }
 }

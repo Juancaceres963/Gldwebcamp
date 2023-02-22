@@ -33,6 +33,7 @@ pase_completo.addEventListener("blur", mostrarDias);
 nombre.addEventListener("blur", validarCampos)
 apellido.addEventListener("blur", validarCampos);
 email.addEventListener("blur", validarCampos);
+email.addEventListener("blur", validarEmail);
 
 function validarCampos(){
     if(this.value == ""){
@@ -47,6 +48,20 @@ function validarCampos(){
         errorDiv.style.border = "none";
         errorDiv.style.display = "none";
     }
+}
+
+function validarEmail() {
+    if (this.value.indexOf("@")  > -1){
+        this.style.border = "1px solid #222";
+        errorDiv.innerHTML = "";
+        errorDiv.style.border = "none";
+        errorDiv.style.display = "none";
+    } else {
+        errorDiv.style.display = "block";
+        errorDiv.innerHTML = "Debes ingresar una direccion de correo valida.";
+        this.style.border = "1px solid red";
+        errorDiv.style.border = "1px solid red";
+    } 
 }
 
 calcular.addEventListener("click", calcularMontos); // Evento que se activa al hacer click

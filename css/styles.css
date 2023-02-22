@@ -837,6 +837,7 @@ div.suma-total {
   margin: 0 auto;
   width: 30%;
   text-align: center;
+  display: none;
 }
 
 

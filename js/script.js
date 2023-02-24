@@ -154,3 +154,21 @@
     }
   }); //Don content Loaded
 })();
+
+
+// ============ Document Ready ============
+$(function(){
+  $(".programa-evento .info-curso:first").show();
+  $(".menu-programa a:first").addClass("activo");
+  
+  $(".menu-programa a").on("click", function(){
+    var enlace = $(this).attr("href");
+    $(".programa-evento .info-curso").hide();
+    $(".menu-programa a").removeClass("activo");
+    $(this).addClass("activo")
+    $(enlace).fadeIn(1000);
+
+    
+    return false;
+  })
+})

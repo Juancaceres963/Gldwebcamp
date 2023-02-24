@@ -4,20 +4,6 @@
   var regalo = document.getElementById("regalo");
 
   document.addEventListener("DOMContentLoaded", function () {
-    //Mapa
-    var map = L.map("mapa").setView([-34.609528, -58.388579], 17);
-
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    L.marker([-34.609528, -58.388579])
-      .addTo(map)
-      .bindPopup("GDLWEBCAMP 2023 <br> Boletos ya disponibles.")
-      .openPopup();
-    //   .bindTooltip("Un Tooltip")
-    //   .openTooltip();
 
     // Campos datos de usuario
     var nombre = document.getElementById("nombre");
@@ -40,15 +26,28 @@
     var etiquetas = document.getElementById("etiquetas");
     var camisas = document.getElementById("camisa-evento");
 
-    pase_dia.addEventListener("blur", mostrarDias); //Evento que espera a que un input termine de tener su valor
-    pase_dos_dias.addEventListener("blur", mostrarDias);
-    pase_completo.addEventListener("blur", mostrarDias);
-
+    if(pase_dia){
+      pase_dia.addEventListener("blur", mostrarDias, false); //Evento que espera a que un input termine de tener su valor
+    }
+    if (pase_dos_dias){
+      pase_dos_dias.addEventListener("blur", mostrarDias, false);
+    }
+    if (pase_completo){
+      pase_completo.addEventListener("blur", mostrarDias, false);
+    }
+    
     //Validacion de campos
-    nombre.addEventListener("blur", validarCampos);
-    apellido.addEventListener("blur", validarCampos);
-    email.addEventListener("blur", validarCampos);
-    email.addEventListener("blur", validarEmail);
+    if(nombre){
+      nombre.addEventListener("blur", validarCampos, false);
+    }
+    if(nombre){
+      apellido.addEventListener("blur", validarCampos, false);
+    }
+    if(email){
+      email.addEventListener("blur", validarCampos, false);
+      email.addEventListener("blur", validarEmail, false);
+    }
+    
 
     function validarCampos() {
       if (this.value == "") {
@@ -78,8 +77,9 @@
       }
     }
 
-    calcular.addEventListener("click", calcularMontos); // Evento que se activa al hacer click
-
+    if(calcular){
+      calcular.addEventListener("click", calcularMontos, false); // Evento que se activa al hacer click
+    }
     //Funciones
     //Calcular Montos
     function calcularMontos(event) {
@@ -152,23 +152,43 @@
         document.getElementById(diasElegidos[i]).style.display = "block";
       }
     }
+
+    //Mapa
+    var map = L.map("mapa").setView([-34.609528, -58.388579], 17);
+
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker([-34.609528, -58.388579])
+      .addTo(map)
+      .bindPopup("GDLWEBCAMP 2023 <br> Boletos ya disponibles.")
+      .openPopup()
+      .bindTooltip("Un Tooltip")
+      .openTooltip();
   }); //Don content Loaded
 })();
 
-
 // ============ Document Ready ============
-$(function(){
+$(function () {
   $(".programa-evento .info-curso:first").show();
   $(".menu-programa a:first").addClass("activo");
-  
-  $(".menu-programa a").on("click", function(){
+
+  $(".menu-programa a").on("click", function () {
     var enlace = $(this).attr("href");
     $(".programa-evento .info-curso").hide();
     $(".menu-programa a").removeClass("activo");
-    $(this).addClass("activo")
+    $(this).addClass("activo");
     $(enlace).fadeIn(1000);
 
-    
     return false;
-  })
-})
+  });
+
+  // Parte de contador resumen evento
+
+  $(".resumen-evento li:nth-child(1) p").animateNumber({ number: 6 }, 1200);
+  $(".resumen-evento li:nth-child(2) p").animateNumber({ number: 15 }, 1200);
+  $(".resumen-evento li:nth-child(3) p").animateNumber({ number: 3 }, 1200);
+  $(".resumen-evento li:nth-child(4) p").animateNumber({ number: 9 }, 1200);
+});

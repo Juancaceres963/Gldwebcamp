@@ -170,6 +170,13 @@
 
 // ============ Document Ready ============
 $(function () {
+
+  // Titulo principal
+
+  $(".nombre-sitio").lettering()
+
+  // Programas y talleres
+
   $(".programa-evento .info-curso:first").show();
   $(".menu-programa a:first").addClass("activo");
 
@@ -199,3 +206,4 @@ $(function () {
     $("#segundos").html(event.strftime("%S"));
   });
 });
+

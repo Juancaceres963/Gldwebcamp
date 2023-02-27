@@ -4,7 +4,6 @@
   var regalo = document.getElementById("regalo");
 
   document.addEventListener("DOMContentLoaded", function () {
-
     // Campos datos de usuario
     var nombre = document.getElementById("nombre");
     var apellido = document.getElementById("apellido");
@@ -26,28 +25,27 @@
     var etiquetas = document.getElementById("etiquetas");
     var camisas = document.getElementById("camisa-evento");
 
-    if(pase_dia){
+    if (pase_dia) {
       pase_dia.addEventListener("blur", mostrarDias, false); //Evento que espera a que un input termine de tener su valor
     }
-    if (pase_dos_dias){
+    if (pase_dos_dias) {
       pase_dos_dias.addEventListener("blur", mostrarDias, false);
     }
-    if (pase_completo){
+    if (pase_completo) {
       pase_completo.addEventListener("blur", mostrarDias, false);
     }
-    
+
     //Validacion de campos
-    if(nombre){
+    if (nombre) {
       nombre.addEventListener("blur", validarCampos, false);
     }
-    if(nombre){
+    if (nombre) {
       apellido.addEventListener("blur", validarCampos, false);
     }
-    if(email){
+    if (email) {
       email.addEventListener("blur", validarCampos, false);
       email.addEventListener("blur", validarEmail, false);
     }
-    
 
     function validarCampos() {
       if (this.value == "") {
@@ -77,7 +75,7 @@
       }
     }
 
-    if(calcular){
+    if (calcular) {
       calcular.addEventListener("click", calcularMontos, false); // Evento que se activa al hacer click
     }
     //Funciones
@@ -191,4 +189,13 @@ $(function () {
   $(".resumen-evento li:nth-child(2) p").animateNumber({ number: 15 }, 1200);
   $(".resumen-evento li:nth-child(3) p").animateNumber({ number: 3 }, 1200);
   $(".resumen-evento li:nth-child(4) p").animateNumber({ number: 9 }, 1200);
+
+  // Cuenta regresiva
+
+  $(".cuenta-regresiva").countdown("2023/12/01 09:00:00", function (event) {
+    $("#dias").html(event.strftime("%D"));
+    $("#horas").html(event.strftime("%H"));
+    $("#minutos").html(event.strftime("%M"));
+    $("#segundos").html(event.strftime("%S"));
+  });
 });
